@@ -1,0 +1,14 @@
+{
+  "name": "wang/pangolin",
+  "description": "抖客穿山甲自用sdk",
+  "version": "v1.0",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "pangolin\\sdk\\": "src/"
+    }
+  }
+}
