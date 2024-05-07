@@ -1,5 +1,5 @@
 <?php
-namespace pangolin\sdk\src\http;
+namespace pangolin\sdk\http;
 
 
 /**
