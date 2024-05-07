@@ -7,7 +7,7 @@ namespace pangolin\sdk\http;
 class PopHttpClient
 {
 
-	private string $apiServerUrl = "https://ecom.pangolin-sdk-toutiao.com/";//接口域名
+	private string $apiServerUrl = "https://ecom.pangolin-sdk-toutiao.com";//接口域名
 
 	private string $app_id='';//在穿山甲媒体平台上注册的应用id
 

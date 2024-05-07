@@ -25,6 +25,7 @@ abstract class PopBaseHttpRequest
 
     protected final function setUserParam(&$paramMap, $name, $param)
     {
+
         if (!is_null($param)&&$param !== "") {
             if ($this->isPrimaryType($param)) {
                 $paramMap[$name] = $param;
@@ -32,7 +33,6 @@ abstract class PopBaseHttpRequest
                 $paramMap[$name] = json_encode($param);
             }
         }
-
     }
 
     private function isPrimaryType($param): bool
@@ -49,7 +49,9 @@ abstract class PopBaseHttpRequest
             return true;
         } else if (is_numeric($param)) {
             return true;
-        } else {
+        }else if(is_array($param)){
+			return true;
+		} else {
             return is_string($param);
         }
     }

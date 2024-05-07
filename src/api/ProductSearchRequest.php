@@ -1,5 +1,6 @@
 <?php
 	/**
+	 * 商品搜索接口
 	 * Created by:
 	 * User: wangs
 	 * Date: 2024/4/23
@@ -26,7 +27,7 @@
 		 * 商品关键词
 		 * @var string
 		 */
-		private string $title;//商品关键词
+		private string $title='';//商品关键词
 		private ?array $first_cids = null;
 		private ?array $second_cids = null;
 		private ?array $third_cids = null;
@@ -44,42 +45,38 @@
 
 
 
-		public function __construct(){
-
-		}
-
 		/**
 		 * @return string
 		 */
 		public function getType(): string
 		{
-			return "product/search";
+			return "/product/search";
 		}
 
 
 		/**
-		 * @param $params
+		 * @param $var
 		 * @return void
 		 */
-		protected function setUserParams(&$params)
+		protected function setUserParams(&$var)
 		{
-			$this->setUserParam($params, "page", $this->page);
-			$this->setUserParam($params, "page_size", $this->page_size);
-			$this->setUserParam($params, "title", $this->title);
-			$this->setUserParam($params, "first_cids", $this->first_cids);
-			$this->setUserParam($params, "second_cids", $this->second_cids);
-			$this->setUserParam($params, "third_cids", $this->third_cids);
-			$this->setUserParam($params, "price_min", $this->price_min);
-			$this->setUserParam($params, "price_max", $this->price_max);
-			$this->setUserParam($params, "sell_num_min", $this->sell_num_min);
-			$this->setUserParam($params, "sell_num_max", $this->sell_num_max);
-			$this->setUserParam($params, "search_type", $this->search_type);
-			$this->setUserParam($params, "order_type", $this->order_type);
-			$this->setUserParam($params, "cos_fee_min", $this->cos_fee_min);
-			$this->setUserParam($params, "cos_fee_max", $this->cos_fee_max);
-			$this->setUserParam($params, "cos_ratio_min", $this->cos_ratio_min);
-			$this->setUserParam($params, "cos_ratio_max", $this->cos_ratio_max);
-			$this->setUserParam($params, "activity_id", $this->activity_id);
+			$this->setUserParam($var, "page", $this->page);
+			$this->setUserParam($var, "page_size", $this->page_size);
+			$this->setUserParam($var, "title", $this->title);
+			$this->setUserParam($var, "first_cids", $this->first_cids);
+			$this->setUserParam($var, "second_cids", $this->second_cids);
+			$this->setUserParam($var, "third_cids", $this->third_cids);
+			$this->setUserParam($var, "price_min", $this->price_min);
+			$this->setUserParam($var, "price_max", $this->price_max);
+			$this->setUserParam($var, "sell_num_min", $this->sell_num_min);
+			$this->setUserParam($var, "sell_num_max", $this->sell_num_max);
+			$this->setUserParam($var, "search_type", $this->search_type);
+			$this->setUserParam($var, "order_type", $this->order_type);
+			$this->setUserParam($var, "cos_fee_min", $this->cos_fee_min);
+			$this->setUserParam($var, "cos_fee_max", $this->cos_fee_max);
+			$this->setUserParam($var, "cos_ratio_min", $this->cos_ratio_min);
+			$this->setUserParam($var, "cos_ratio_max", $this->cos_ratio_max);
+			$this->setUserParam($var, "activity_id", $this->activity_id);
 		}
 
 		//设置商品第几页 从1开始
