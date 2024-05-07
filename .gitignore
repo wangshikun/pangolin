@@ -2,3 +2,6 @@
 /.vscode
 *.log
 .env
+vendor
+composer.lock
+/src/test
